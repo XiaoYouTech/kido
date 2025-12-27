@@ -1,0 +1,375 @@
+:root {
+    --primary-color: #007AFF;
+    --secondary-color: #5856D6;
+    --accent-color: #FF9500;
+    --success-color: #34C759;
+    --text-color: #1C1C1E;
+    --text-secondary: #8E8E93;
+    --bg-color: #FFFFFF;
+    --bg-secondary: #F2F2F7;
+    --border-radius: 16px;
+    --container-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+    padding: 15px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav a {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.btn {
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 1;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-light {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.btn-large {
+    padding: 15px 32px;
+    font-size: 18px;
+}
+
+/* Hero Section */
+.hero {
+    padding-top: 140px;
+    padding-bottom: 80px;
+    background: linear-gradient(135deg, #F2F2F7 0%, #E5E5EA 100%);
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    max-width: 500px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 300px;
+    border-radius: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border: 8px solid white;
+}
+
+/* Values Section */
+.values {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.value-card {
+    text-align: center;
+    padding: 40px 30px;
+    border-radius: var(--border-radius);
+    background: var(--bg-secondary);
+    transition: transform 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-box {
+    width: 64px;
+    height: 64px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 28px;
+    color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.value-card h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.value-card p {
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+/* Features Section */
+.features {
+    padding: 100px 0;
+    background-color: #FAFAFA;
+}
+
+.feature-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.feature-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-text h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.feature-text p {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 400px;
+}
+
+.feature-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-img img {
+    max-width: 280px;
+    border-radius: 30px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Screenshots */
+.screenshots {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.screenshot-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding: 20px 0 40px;
+    scrollbar-width: none; /* Firefox */
+}
+
+.screenshot-grid::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.screenshot-grid img {
+    height: 500px;
+    border-radius: 24px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border: 4px solid #F2F2F7;
+}
+
+/* CTA */
+.cta {
+    padding: 100px 0;
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.cta p {
+    font-size: 20px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+/* Footer */
+.footer {
+    padding: 60px 0 30px;
+    background-color: #1C1C1E;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-info h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.footer-info p {
+    color: #8E8E93;
+    max-width: 300px;
+}
+
+.footer-links h4 {
+    margin-bottom: 20px;
+    color: #8E8E93;
+}
+
+.footer-links a {
+    display: block;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #3A3A3C;
+    padding-top: 30px;
+    text-align: center;
+    color: #8E8E93;
+    font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-content h1 {
+        font-size: 40px;
+    }
+    
+    .hero-content p {
+        margin: 0 auto 32px;
+    }
+    
+    .feature-item, .feature-item.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .feature-text p {
+        margin: 0 auto;
+    }
+    
+    .nav {
+        display: none; /* Simplified for basic mobile */
+    }
+}
